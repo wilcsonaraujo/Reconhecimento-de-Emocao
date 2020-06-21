@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reconhecimento de emoção</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <!--Método JS-->
+    <script src="face-detection.js"></script>
+</head>
+<body>
+<main class="container" role="main">
+    <h1 class="mt-5">Reconhecimento de Emoção</h1>
+    <form>
+       <div class="form-row"><label class="lead">Para realização do reconhecimento, certifique-se de que a imagem não seja grande</label>
+            <div class="form-group col-md-6"><label class="lead">Url da Imagem:</label><input class="form-control" id="inputImage" width="50%" type="text" name="inputImage" value=""></div>
+        </div><button class="btn btn-primary" type="button" onclick="processImage()">Analisar Rosto</button><br><br>
+        <div id="wrapper" style="width:1020px; display:table;">
+            <div id="jsonOutput" style="width:600px; display:table-cell;">
+                <p class="lead">Retorno:</p><textarea class="form-control" id="responseTextArea" style="width:580px; height:400px;"></textarea></div>
+            <div id="imageDiv" style="width:420px; display:table-cell;">
+                <p class="lead">Imagem Analisada:</p><img id="sourceImage" width="400"></div>
+        </div>
+    </form>
+</main>
+</body>
+<!-- jQuery library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Popper JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
